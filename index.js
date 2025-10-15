@@ -16,6 +16,14 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/v1", (req, res) => {
+  res.json({
+    message: "Welcome to Git Learning Project!",
+    timestamp: format(new Date(), "yyyy-MM-dd HH:mm:ss"),
+    version: "1.0.0",
+  });
+});
+
 app.get("/members", (req, res) => {
   res.json({
     members: [
